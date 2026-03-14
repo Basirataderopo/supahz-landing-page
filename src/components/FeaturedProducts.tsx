@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import chelseaImg from "@/assets/chelsea-boot.png";
+// ... keep existing code
 import beltImg from "@/assets/belt.png";
 
 const products = [
   { name: "The Oxford", price: "$245", image: "/lovable-uploads/cfacf266-6afb-4773-b84c-54ff31c53f55.jpg" },
-  { name: "The Chelsea", price: "$265", image: chelseaImg },
+  { name: "The Chelsea", price: "$265", image: "/lovable-uploads/c9b11607-cf0f-4b9c-adbd-af9c89d6dd9f.jpg" },
   { name: "The Slide", price: "$125", image: "/lovable-uploads/f2a0d094-b6da-4c69-b0b8-45c706cb4036.jpg" },
   { name: "The Belt", price: "$95", image: beltImg },
 ];
