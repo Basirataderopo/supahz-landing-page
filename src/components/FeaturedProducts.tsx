@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import oxfordImg from "@/assets/oxford-shoe.png";
 import chelseaImg from "@/assets/chelsea-boot.png";
-import slideImg from "@/assets/slide.png";
+
 import beltImg from "@/assets/belt.png";
 
 const products = [
