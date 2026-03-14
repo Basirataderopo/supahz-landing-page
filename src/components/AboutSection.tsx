@@ -10,14 +10,14 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", duration: 0.6, bounce: 0 }}
-          className="overflow-hidden"
-        >
+          className="overflow-hidden">
+          
           <img
-            src={craftsmanshipImg}
+
             alt="Close-up of Supahz Cordwainer stitching detail"
             className="w-full object-cover"
-            loading="lazy"
-          />
+            loading="lazy" src="/lovable-uploads/6d955efb-7d07-4c56-a8d3-3057df256673.jpg" />
+          
         </motion.div>
 
         <motion.div
@@ -25,8 +25,8 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", duration: 0.6, bounce: 0 }}
-          className="flex flex-col gap-6"
-        >
+          className="flex flex-col gap-6">
+          
           <span className="section-label">The Cordwainer's Logic</span>
           <h2 className="text-foreground text-4xl md:text-5xl font-bold">Crafted to Endure</h2>
           <p className="text-lg text-foreground/60 leading-relaxed">
@@ -40,8 +40,8 @@ const AboutSection = () => {
           </p>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
