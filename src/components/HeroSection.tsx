@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import heroShoe from "@/assets/hero-shoe.png";
 
-const transition = { type: "spring", duration: 0.6, bounce: 0 };
+const transition = { type: "spring" as const, duration: 0.6, bounce: 0 };
 
 const HeroSection = () => {
   return (
