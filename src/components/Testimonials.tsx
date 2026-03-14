@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote: "The Oxfords feel like they were made for my feet. Six months in, they only look better with age.",
-    author: "James O.",
+    author: "Basirat O.",
     role: "Architect",
   },
   {
