@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import chelseaImg from "@/assets/chelsea-boot.png";
-...
+import beltImg from "@/assets/belt.png";
+
 const products = [
   { name: "The Oxford", price: "$245", image: "/lovable-uploads/cfacf266-6afb-4773-b84c-54ff31c53f55.jpg" },
   { name: "The Chelsea", price: "$265", image: chelseaImg },
