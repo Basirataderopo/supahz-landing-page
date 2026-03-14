@@ -4,7 +4,7 @@ const testimonials = [
   {
     quote: "The Oxfords feel like they were made for my feet. Six months in, they only look better with age.",
     author: "Basirat O.",
-    role: "Architect",
+    role: "Banker",
   },
   {
     quote: "Finally, slides that don't look cheap. The leather quality is unmistakable.",
