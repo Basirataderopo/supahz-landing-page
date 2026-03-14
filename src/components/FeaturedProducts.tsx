@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import chelseaImg from "@/assets/chelsea-boot.png";
+// ... keep existing code
 import beltImg from "@/assets/belt.png";
 
 const products = [
