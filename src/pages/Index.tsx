@@ -19,7 +19,7 @@ const Index = () => {
       <Testimonials />
       <ContactSection />
       <Footer />
-      <ChatAssistant />
+      <ChatWidget />
     </div>
   );
 };
