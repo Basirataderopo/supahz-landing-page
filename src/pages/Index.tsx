@@ -5,7 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/ContactSection";
-import ChatAssistant from "@/components/ChatAssistant";
+import ChatWidget from "@/components/ChatWidget";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -19,7 +19,7 @@ const Index = () => {
       <Testimonials />
       <ContactSection />
       <Footer />
-      <ChatAssistant />
+      <ChatWidget />
     </div>
   );
 };
