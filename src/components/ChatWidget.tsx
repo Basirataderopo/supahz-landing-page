@@ -9,7 +9,8 @@ export default function ChatWidget() {
     link.href = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css';
     document.head.appendChild(link);
 
-    import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js').then((module) => {
+    // @ts-ignore - external CDN module
+    import(/* @vite-ignore */ 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js').then((module: any) => {
       module.createChat({
         webhookUrl: 'https://n8n-x6a5.onrender.com/webhook/6d6887fe-bbdd-4559-9430-04942ed5f9df/chat',
         title: 'Supahz Assistant 👟',
