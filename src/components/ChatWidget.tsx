@@ -3,34 +3,20 @@
 import { useEffect } from 'react';
 
 export default function ChatWidget() {
-  useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css';
-    document.head.appendChild(link);
-
-    // @ts-ignore - external CDN module
-    import(/* @vite-ignore */ 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js').then((module: any) => {
-      module.createChat({
-        webhookUrl: 'https://n8n-x6a5.onrender.com/webhook/6d6887fe-bbdd-4559-9430-04942ed5f9df/chat',
-        title: 'Supahz Assistant 👟',
-        subtitle: 'Ask about sizing, orders, styles, care...',
-        initialMessages: [
-          {
-            text: 'Hi! Welcome to Supahz Footwear. How can I help you today?',
-            from: 'bot',
-          },
-        ],
-        mode: 'window',
-        primaryColor: '#000000',
-        showWelcomeScreen: true,
-      });
-    });
-
-    return () => {
-      if (link.parentNode) link.parentNode.removeChild(link);
-    };
-  }, []);
-
-  return null;
+  return (
+    <iframe
+      src="https://supahzchat-jv7x6ddx.manus.space"
+      style={{
+        position: 'fixed',
+        bottom: 0,
+        right: 0,
+        width: '420px',
+        height: '600px',
+        border: 'none',
+        zIndex: 9999,
+        background: 'transparent',
+      }}
+      allow="microphone"
+    />
+  );
 }
