@@ -1,3 +1,4 @@
+'use client';
 const send = async (text: string) => {
   if (!text.trim()) return;
 
