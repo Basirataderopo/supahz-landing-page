@@ -4,7 +4,7 @@ const send = async (text: string) => {
   setMessages((prev) => [...prev, { text, from: "user" }]);
   setInput("");
 
-  // Generate or reuse a persistent session ID (stored in localStorage)
+  // Persistent session ID for memory
   let sessionId = localStorage.getItem("supahz_chat_sessionId");
   if (!sessionId) {
     sessionId = "supahz_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9);
@@ -18,23 +18,20 @@ const send = async (text: string) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: text,        // Keep "message" for now (matches your current AI Agent prompt)
-          sessionId: sessionId, // ← This fixes the "No session ID found" error
+          chatInput: text,      // n8n Chat Trigger expects "chatInput"
+          sessionId: sessionId, // Required for Simple Memory
         }),
       }
     );
 
-    if (!res.ok) throw new Error("Network error");
+    if (!res.ok) {
+      throw new Error(HTTP error! Status: ${res.status});
+    }
 
     const data = await res.json();
 
-    setMessages((prev) => [
-      ...prev,
-      { 
-        text: data.output || data.message || data.text || "Got your message!", 
-        from: "bot" 
-      },
-    ]);
+    const botReply = data.output || data.message || data.text || data.response || "Got your message!";
+    setMessages((prev) => [...prev, { text: botReply, from: "bot" }]);
   } catch (err) {
     console.error("Chat error:", err);
     setMessages((prev) => [
