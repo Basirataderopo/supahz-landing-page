@@ -5,7 +5,7 @@ import { MessageCircle, X, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const quickActions = ["Ask about sizing", "Track my order", "Product care"];
-const sessionId = `session_${Date.now()}`;
+const sessionId = "supahz-chat-session";
 
 const ChatAssistant = () => {
   const [open, setOpen] = useState(false);
