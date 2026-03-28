@@ -24,7 +24,7 @@ const ChatAssistant = () => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ action: "sendMessage", sessionId, chatInput: text }),
+          body: JSON.stringify({ action: "sendMessage", sessionId, message: text }),
         }
       );
       const data = await res.json();
